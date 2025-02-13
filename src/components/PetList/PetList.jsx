@@ -1,3 +1,4 @@
+import './Petlist.css'
 // Always write out basic html
 // import it into the file to be rendered (aka App.js)
 // confirm your props in the devtools before you use them!
@@ -10,8 +11,9 @@ export default function PetList(props){
 
     // check to see if we have pets
     return (
-        <section>
+        <section className={'pet-list'}>
             <h1>Pet List</h1>
+            <button onClick={props.handleFormOpen}>{props.buttonTextForForm}</button>
             {petLis.length !== 0 ? (
                 <ul>
                     {petLis}
